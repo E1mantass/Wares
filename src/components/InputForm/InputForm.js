@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const InputForm = (props)=>{
-    const {formData, setFormData} = useState({
-        'id':'',
-        'title':'',
-        'price':'',
-        'amount':''
+    const [formData, setFormData] = useState({
+        id:'',
+        title:'',
+        price:'',
+        amount:''
     })
     const handleChange = (event)=>{
         setFormData(
