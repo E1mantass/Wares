@@ -1,9 +1,10 @@
-import InputForm from '../InputForm/InputForm'
+import Main from "../Main/Main";
+//import Table from '../Table/Table'
 
 const App = ()=>{
     return(
         <div className="App">
-            <InputForm />
+            <Main/>
         </div>
     );
 }

@@ -1,11 +1,11 @@
 import { useState } from "react";
-
+let productID = 0;
 const InputForm = (props)=>{
     const [formData, setFormData] = useState({
-        id:'',
-        title:'',
-        price:'',
-        amount:''
+        'id':'',
+        'title':'',
+        'price':'',
+        'amount':''
     })
     const handleChange = (event)=>{
         setFormData(
@@ -16,9 +16,12 @@ const InputForm = (props)=>{
         )
     }
     const submitHandle = (event)=>{
+        console.log("id: " + productID)
+        formData.id = productID;
+        productID += 1
         event.preventDefault();
         props.onSave(formData)
-        console.log(formData);
+        console.log(setFormData);
     }
     return(
         <form className="form" onSubmit={submitHandle}>
