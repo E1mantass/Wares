@@ -1,5 +1,6 @@
 import { useState } from "react";
-let productID = 0;
+
+let productID = 0
 const InputForm = (props)=>{
     const [formData, setFormData] = useState({
         'id':'',
@@ -16,12 +17,11 @@ const InputForm = (props)=>{
         )
     }
     const submitHandle = (event)=>{
-        console.log("id: " + productID)
-        formData.id = productID;
-        productID += 1
         event.preventDefault();
-        props.onSave(formData)
-        console.log(setFormData);
+        formData.id = productID
+        productID += 1;
+        
+        
     }
     return(
         <form className="form" onSubmit={submitHandle}>
